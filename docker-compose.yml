@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+      build: ./src/test
+      ports:
+          - "5000:5000"
+      volumes:
+          - ./src/test:/code
+      environment:
+          FLASK_ENV: development
+  redis:
+      image: "redis:alpine"
+  tests:
+      build: ./src/integration-test
+      volumes:
+          - ./src/integration-test:/tests
