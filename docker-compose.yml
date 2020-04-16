@@ -6,6 +6,8 @@ services:
           POSTGRES_PASSWORD: postgres
       ports:
           - "5433:5432"
+      networks:
+          - inside-net
   django:
       build: ./src/django
       environment:
@@ -16,6 +18,8 @@ services:
           - "8000:8000"
       depends_on:
           - db
+      networks:
+          - inside-net
       command: ["./wait-for-postgres.sh", "db", "python", "manage.py", "runserver", "0:8000"]
   web:
       build: ./src/test
@@ -38,3 +42,9 @@ services:
       depends_on:
           - django
           - web
+      networks:
+          - inside-net
+
+networks:
+  inside-net:
+    driver: bridge
