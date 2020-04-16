@@ -1,5 +1,22 @@
 version: '3'
 services:
+  db:
+      image: postgres:11
+      environment:
+          POSTGRES_PASSWORD: postgres
+      ports:
+          - "5433:5432"
+  django:
+      build: ./src/django
+      environment:
+          POSTGRES_PASSWORD: postgres
+      volumes:
+          - ./src/django:/code/django
+      ports:
+          - "8000:8000"
+      depends_on:
+          - db
+      command: ["./wait-for-postgres.sh", "db", "python", "manage.py", "runserver", "0:8000"]
   web:
       build: ./src/test
       ports:
@@ -8,9 +25,16 @@ services:
           - ./src/test:/code
       environment:
           FLASK_ENV: development
+      depends_on:
+          - redis
   redis:
       image: "redis:alpine"
+ # geth:
+ #     image: "ethereum/client-go:stable"
   tests:
       build: ./src/integration-test
       volumes:
           - ./src/integration-test:/tests
+      depends_on:
+          - django
+          - web
