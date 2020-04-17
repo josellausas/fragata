@@ -1,4 +1,7 @@
 # fragata
+
+[![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
+
 Lean and mean Microservices with Docker and Kubernetes
 
 ## About

@@ -11,8 +11,8 @@ before_install:
   - docker-compose ps
 
 script:
-  - docker-compose exec zunware/test busted main_spec.moon
-  - docker-compose exec zunware/django python manage.py test
+  - docker run fragata_tests
+  - docker-compose exec fragata_django python manage.py test
 
 after_script:
   - docker-compose down
