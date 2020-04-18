@@ -38,6 +38,10 @@ dco up -d
 dco down
 ```
 
+# Monitoring
+
+Uses Grafana and Prometheus containers to provide monitoring.
+
 # Kubernetes
 
 ```bash

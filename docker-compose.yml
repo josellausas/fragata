@@ -31,6 +31,8 @@ services:
           FLASK_ENV: development
       depends_on:
           - redis
+      networks:
+          - inside-net
   redis:
       image: "redis:alpine"
  # geth:
@@ -42,6 +44,11 @@ services:
       depends_on:
           - django
           - web
+      networks:
+          - inside-net
+
+  prometheus:
+      build: ./src/prometheus
       networks:
           - inside-net
 
