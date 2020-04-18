@@ -49,6 +49,8 @@ services:
 
   prometheus:
       build: ./src/prometheus
+      ports:
+          - "9090:9090"
       networks:
           - inside-net
 
