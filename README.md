@@ -1,35 +1,65 @@
-# fragata
+# About
+Lean and mean Continously Integrated and Deployed (CI/CD) Microservices.
+(under development)
 
+## Features
+
+- [x] Micoservices
+- [x] CI
+- [ ] CD
+- [ ] Kubernetes
+- [ ] Monitoring
+
+# Building and Running
+
+You need to have docker and docker-compose installed then run:
+`docker-compose --build up`
+
+# Microservices
+
+Using docker, we can run microservices. Use `docker-compose` to run all, or `docker` for individual services
+
+Here is a list of microservices:
+
+- Postgres (WIP)
+- Django (WIP)
+- Busted (WIP)
+- Lapis (WIP)
+- Nginx (WIP)
+- MQTT (WIP)
+- Prometheus (WIP)
+- Grafana (WIP)
+
+# Continous Integration
 [![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
 
-Lean and mean Microservices with Docker and Kubernetes
+# Continous Deployment
+Not deployed yet. WIP
 
-## About
-Uses microservices
 
-## Micro-Services
-These are the different micro services that are setup and ran by docker
+# Integration Tests (WIP)
 
-### Integration Tests
-Uses lua busted to run tests
+Integration tests are inside `src/integration-test`
+Uses busted. Run tests with `busted .`
 
-### Database
-Runs a database for persisting data
+# Monitoring
 
-### Web Server
-Runs a web server for http comms
+Uses Grafana and Prometheus containers to provide monitoring.
 
-# Security Tools
+# Resources
+
+## Security Tools
 - https://www.inspec.io/
 - https://github.com/docker/docker-bench-security
 
-# Tools
+## Tools
 - https://healthchecks.io/
 - https://sentry.io/welcome/
 - https://travis-ci.org
 
 
-# Docker
+
+## Docker Notes
 
 ```bash
 # Build with docker-compose
@@ -38,9 +68,7 @@ dco up -d
 dco down
 ```
 
-# Monitoring
 
-Uses Grafana and Prometheus containers to provide monitoring.
 
 # Kubernetes
 
