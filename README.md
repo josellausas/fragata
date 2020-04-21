@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
+
+
 # About
 Lean and mean Continously Integrated and Deployed (CI/CD) Microservices.
 (under development)
@@ -31,7 +34,10 @@ Here is a list of microservices:
 - Grafana (WIP)
 
 # Continous Integration
-[![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
+Uses Travis CI to continously integrate and build docker images:
+The 'travis' tries to build all the images defined in `docker-compose.yml` and runs tests from `src/integration-test`.
+Here is the build status for `master`: [![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
+
 
 # Continous Deployment
 Not deployed yet. WIP
@@ -48,13 +54,15 @@ Uses Grafana and Prometheus containers to provide monitoring.
 
 # Resources
 
-## Security Tools
+## Security
 - https://www.inspec.io/
 - https://github.com/docker/docker-bench-security
 
 ## Tools
 - https://healthchecks.io/
 - https://sentry.io/welcome/
+
+## CI
 - https://travis-ci.org
 
 
