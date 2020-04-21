@@ -1,5 +1,13 @@
 version: '3'
 services:
+  lapis:
+      build: ./src/lapis
+      ports:
+        - "8080:8080"
+      networks:
+        - inside-net
+      volumes:
+          - ./src/lapis:/code/lapis
   db:
       image: postgres:11
       environment:
@@ -35,8 +43,8 @@ services:
           - inside-net
   redis:
       image: "redis:alpine"
- # geth:
- #     image: "ethereum/client-go:stable"
+# geth:
+#     image: "ethereum/client-go:stable"
   tests:
       build: ./src/integration-test
       volumes:
