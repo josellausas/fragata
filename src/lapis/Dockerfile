@@ -10,5 +10,6 @@ COPY . ./code
 EXPOSE 8080
 WORKDIR /code
 RUN moonc *.moon
+RUN busted .
 CMD ["lapis", "server"]
 

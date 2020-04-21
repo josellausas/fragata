@@ -213,3 +213,5 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/python
+src/lapis/*_temp
+src/lapis/logs
