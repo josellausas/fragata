@@ -6,8 +6,6 @@ services:
         - "8080:8080"
       networks:
         - inside-net
-      volumes:
-          - ./src/lapis:/code/lapis
   db:
       image: postgres:11
       environment:
