@@ -105,3 +105,6 @@ kubectl apply -f file.pod.yml
 kubectl exec -it [podname] -- sh
 #
 ```
+# Deploy with Kubernetes
+`cd` into `deploy` directory.
+Apply deployments with `kubectl apply -f 00_namespace.yml`
