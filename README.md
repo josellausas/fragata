@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
+[![Build Status](https://travis-ci.com/josellausas/fragata.svg?branch=master)](https://travis-ci.com/josellausas/fragata)
 
 
 # About
@@ -9,8 +9,8 @@ Lean and mean Continously Integrated and Deployed (CI/CD) Microservices.
 
 - [x] Micoservices
 - [x] CI
-- [ ] CD
-- [ ] Kubernetes
+- [X] CD
+- [X] Kubernetes
 - [ ] Monitoring
 
 # Building and Running
@@ -36,7 +36,7 @@ Here is a list of microservices:
 # Continous Integration
 Uses Travis CI to continously integrate and build docker images:
 The 'travis' tries to build all the images defined in `docker-compose.yml` and runs tests from `src/integration-test`.
-Here is the build status for `master`: [![Build Status](https://travis-ci.com/zunware/fragata.svg?branch=master)](https://travis-ci.com/zunware/fragata)
+Here is the build status for `master`: [![Build Status](https://travis-ci.com/josellausas/fragata.svg?branch=master)](https://travis-ci.com/josellausas/fragata)
 
 
 # Continous Deployment
